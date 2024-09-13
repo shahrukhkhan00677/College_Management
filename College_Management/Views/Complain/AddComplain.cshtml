@@ -1,0 +1,53 @@
+﻿@model College_Management.Models.TblComplane
+
+@{
+    ViewData["Title"] = "AddComplain";
+}
+
+<h1>AddComplain</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddComplain">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CmName" class="control-label"></label>
+                <input asp-for="CmName" class="form-control" />
+                <span asp-validation-for="CmName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CmEmail" class="control-label"></label>
+                <input asp-for="CmEmail" class="form-control" />
+                <span asp-validation-for="CmEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CmFatherName" class="control-label"></label>
+                <input asp-for="CmFatherName" class="form-control" />
+                <span asp-validation-for="CmFatherName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CmGender" class="control-label"></label>
+                <input asp-for="CmGender" class="form-control" />
+                <span asp-validation-for="CmGender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CmMobile" class="control-label"></label>
+                <input asp-for="CmMobile" class="form-control" />
+                <span asp-validation-for="CmMobile" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CmDiscription" class="control-label"></label>
+                <input asp-for="CmDiscription" class="form-control" />
+                <span asp-validation-for="CmDiscription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

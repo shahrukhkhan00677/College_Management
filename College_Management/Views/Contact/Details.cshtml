@@ -1,0 +1,54 @@
+﻿@model College_Management.Models.TblContact
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2 class="text-center"> Contact Person Details</h2>
+
+<div>
+    
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            <label>Name</label>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CnName)
+        </dd>
+        <dt class = "col-sm-2">
+            <label>Father Name</label>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CnFatherName)
+        </dd>
+        <dt class = "col-sm-2">
+            <label>Email</label>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CnEmail)
+        </dd>
+        <dt class = "col-sm-2">
+            <label>Gender</label>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CnGender)
+        </dd>
+        <dt class = "col-sm-2">
+            <label>Mobile</label>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CnMobile)
+        </dd>
+        <dt class = "col-sm-2">
+            <label>Massage</label>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CnDiscription)
+        </dd>
+    </dl>
+</div>
+<div>
+   
+    <a asp-action="Index" class="btn btn-warning">Back to List</a>
+</div>

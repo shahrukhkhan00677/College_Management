@@ -1,0 +1,35 @@
+﻿@model College_Management.Models.TblAdmin
+
+@{
+    ViewData["Title"] = "AdminLogin";
+}
+
+<h1 class="col-md-4 offset-4">AdminLogin</h1>
+
+<h5 style="color:red">@ViewBag.failed</h5>
+<hr />
+<div class="row">
+    <div class="col-md-4 offset-4 border border-2 p-5">
+        <form asp-action="AdminLogin">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="AdUsername" class="control-label"></label>
+                <input asp-for="AdUsername" class="form-control" />
+                <span asp-validation-for="AdUsername" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AdPassword" class="control-label"></label>
+                <input asp-for="AdPassword" class="form-control" />
+                <span asp-validation-for="AdPassword" class="text-danger"></span>
+            </div>
+            <div class="form-group mt-2">
+                <div class="d-grid">
+                <input type="submit" value="Login" class="btn btn-primary" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

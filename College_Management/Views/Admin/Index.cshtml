@@ -1,0 +1,171 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-sm-12 col-lg-3 mt-3">
+            <div class="card icon3  mt-2" style="height:100px;">
+                <div class="card-body">
+                    <h5 class="text-center">Logout</h5>
+                    <div class="text-center icon4">
+                        <a asp-controller="Admin" asp-action="AdminLogout"><i class="fa-solid fa-right-from-bracket"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-12 col-lg-3 mt-3">
+            <div class="card icon5  mt-2" style="height:100px;">
+                <div class="card-body">
+                    <h5 class="text-center">Admin</h5>
+                    <div class="text-center icon4">
+                        <p>@ViewBag.adminName</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr style="height:10px"/>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-sm-12 col-lg-3">
+            <div class="card icon2  mt-2" style="height:200px;">
+                <div class="card-body">
+                    <h3 class="text-center">Employees</h3>
+                   <div class="text-center icon">
+                        <a><i class="fa-solid fa-users"></i></a>
+                   </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-12 col-lg-3">
+            <div class="card icon2  mt-2" style="height:200px;">
+                <div class="card-body">
+                    <h3 class="text-center">Student</h3>
+                    <div class="text-center icon">
+                        <a><i class="fa-duotone fa-solid fa-graduation-cap"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-12 col-lg-3">
+            <div class="card icon2  mt-2" style="height:200px;">
+                <div class="card-body">
+                    <h3 class="text-center">Feedback</h3>
+                    <div class="text-center icon">
+                        <a asp-action="Index" asp-controller="Feedback" ><i class="fa-solid fa-message"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-12 col-lg-3">
+            <div class="card icon2 mt-2" style="height:200px;">
+                <div class="card-body">
+                    <h3 class="text-center">Contact</h3>
+                    <div class="text-center icon">
+                        <a asp-action="Index" asp-controller="Contact"><i class="fa-duotone fa-solid fa-address-card"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-12 col-lg-3">
+            <div class="card icon2 mt-2" style="height:200px;">
+                <div class="card-body">
+                    <h3 class="text-center">Job</h3>
+                    <div class="text-center icon">
+                        <a><i class="fa-solid fa-user-group"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-12 col-lg-3">
+            <div class="card icon2 mt-2" style="height:200px;">
+                <div class="card-body">
+                    <h3 class="text-center">Complain</h3>
+                    <div class="text-center icon">
+                        <a asp-action="Index" asp-controller="Complain"><i class="fa-solid fa-gift"></i> </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-12 col-lg-3">
+            <div class="card icon2 mt-2" style="height:200px;">
+                <div class="card-body">
+                    <h3 class="text-center">Student Registration</h3>
+                    <div class="text-center icon">
+                        <a><i class="fa-sharp fa-solid fa-prescription-bottle"></i> </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-12 col-lg-3">
+            <div class="card icon2 mt-2" style="height:200px;">
+                <div class="card-body">
+                    <h3 class="text-center">Student Admission</h3>
+                    <div class="text-center icon">
+                        <a><i class="fa-solid fa-graduation-cap"></i> </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .icon{
+        font-size:70px;
+       
+    }
+
+    .icon4 {
+        font-size: 20px;
+    }
+    .icon2:hover{
+        background-color:yellow;
+        border:2px solid black;
+        border-radius:20px;
+        
+    }
+
+    .icon3:hover {
+        background-color: red;
+        border: 2px solid black;
+        border-radius: 20px;
+    }
+
+    .icon5:hover {
+        background-color: aqua;
+        border: 2px solid black;
+        border-radius: 20px;
+    }
+
+    .adminstyle{
+        color:blue;
+        
+    }
+    .admincard{
+        border: 2px solid black;
+        border-radius: 20px;
+
+    }
+    .admincard:hover {
+        background-color:aqua;
+      
+       
+      
+    }
+</style>

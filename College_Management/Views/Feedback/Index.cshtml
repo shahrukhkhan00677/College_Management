@@ -1,0 +1,45 @@
+﻿@model IEnumerable<College_Management.Models.TblFeedback>
+
+@{
+    ViewData["Title"] = "Index";
+}
+ <a asp-action="Index" asp-controller="Admin" class="btn btn-warning ">Back To</a>
+
+<h3 class="text-center text-info">Feedback of our college and Staff</h3>
+<hr />
+<table class="table table-dark table-hover">
+    <thead>
+        <tr>
+            <th>
+                <label>Name</label>
+            </th>
+            <th>
+                <label>Father Name</label>
+            </th>
+            <th>
+                <label>Male</label>
+            </th>
+          
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FbName)
+            </td>
+            <td>
+              @Html.DisplayFor(modelItem => item.FbFatherName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FbGender)
+            </td>
+            <td>|
+                <a class="btn btn-info" asp-action="Details" asp-route-id="@item.FbId">Details</a> |
+                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.FbId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

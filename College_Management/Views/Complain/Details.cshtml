@@ -1,0 +1,53 @@
+﻿@model College_Management.Models.TblComplane
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Complainer  Details</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            <label>Name</label>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CmName)
+        </dd>
+        <dt class = "col-sm-2">
+            <label>Email</label>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CmEmail)
+        </dd>
+        <dt class = "col-sm-2">
+            <label>Father Name</label>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CmFatherName)
+        </dd>
+        <dt class = "col-sm-2">
+            <label>Gender</label>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CmGender)
+        </dd>
+        <dt class = "col-sm-2">
+            <label>Mobile No.</label>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CmMobile)
+        </dd>
+        <dt class = "col-sm-2">
+            <label>Massage</label>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CmDiscription)
+        </dd>
+    </dl>
+</div>
+<div>
+   
+    <a asp-action="Index" class="btn btn-warning">Back To</a>
+</div>

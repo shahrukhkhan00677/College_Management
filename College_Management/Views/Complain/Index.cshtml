@@ -1,0 +1,45 @@
+﻿@model IEnumerable<College_Management.Models.TblComplane>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Complainer List</h1>
+<hr />
+
+<table class="table table-dark table-hover">
+    <thead>
+        <tr>
+            <th>
+                <label>Name</label>
+            </th>
+            <th>
+                <label>Email</label>
+            </th>
+            <th>
+                <label>Father Name</label>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CmName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CmEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CmFatherName)
+            </td>
+            <td>
+                
+                <a class="btn btn-info" asp-action="Details" asp-route-id="@item.CmId">Details</a> |
+                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.CmId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

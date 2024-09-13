@@ -1,0 +1,54 @@
+﻿@model College_Management.Models.TblContact
+
+@{
+    ViewData["Title"] = "CreateContact";
+}
+<h4 class="text-center">Contact Form</h4>
+<hr />
+<div class="row col-4 offset-4">
+    <div >
+        <form asp-action="CreateContact">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CnName" class="control-label"></label>
+                <input asp-for="CnName" class="form-control" />
+                <span asp-validation-for="CnName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CnFatherName" class="control-label"></label>
+                <input asp-for="CnFatherName" class="form-control" />
+                <span asp-validation-for="CnFatherName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CnEmail" class="control-label"></label>
+                <input asp-for="CnEmail" class="form-control" />
+                <span asp-validation-for="CnEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CnGender" class="control-label"></label>
+                <input asp-for="CnGender" class="form-control" />
+                <span asp-validation-for="CnGender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CnMobile" class="control-label"></label>
+                <input asp-for="CnMobile" class="form-control" />
+                <span asp-validation-for="CnMobile" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CnDiscription" class="control-label"></label>
+                <input asp-for="CnDiscription" class="form-control" />
+                <span asp-validation-for="CnDiscription" class="text-danger"></span>
+            </div>
+            <div class="form-group mt-2">
+                <div class="d-grid">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+               
+            </div>
+        </form>
+    </div>
+    <div class="d-grid mt-2">
+        <a asp-action="Index" asp-controller="Home" class="btn btn-warning">Back to List</a>
+    </div>
+</div>
+

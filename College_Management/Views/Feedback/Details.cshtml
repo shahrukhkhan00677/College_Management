@@ -1,0 +1,54 @@
+﻿@model College_Management.Models.TblFeedback
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+   
+    <h3 class="text-center text-info">Feedback of our college and Staff</h3>
+
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            <label>Name</label>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FbName)
+        </dd>
+        <dt class = "col-sm-2">
+            <label>Father Name</label>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FbFatherName)
+        </dd>
+        <dt class = "col-sm-2">
+            <label>Email</label>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FbEmail)
+        </dd>
+        <dt class = "col-sm-2">
+            <label>Gender</label>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FbGender)
+        </dd>
+        <dt class = "col-sm-2">
+            <label>Contact Number</label>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FbMobile)
+        </dd>
+        <dt class = "col-sm-2">
+            <label>Message</label>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FbFeedback)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Index" class="btn btn-warning">Back To</a>
+</div>

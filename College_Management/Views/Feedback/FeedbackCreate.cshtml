@@ -1,0 +1,58 @@
+﻿@model College_Management.Models.TblFeedback
+
+@{
+    ViewData["Title"] = "FeedbackCreate";
+}
+<h2 class="col-md-4 offset-4">FeedbackCreate</h2>
+
+<hr />
+<div class="row">
+    <div class="col-md-4 offset-4 border border-2 p-3">
+        <form asp-action="FeedbackCreate">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="FbName" class="control-label"></label>
+                <input asp-for="FbName" class="form-control" />
+                <span asp-validation-for="FbName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FbFatherName" class="control-label"></label>
+                <input asp-for="FbFatherName" class="form-control" />
+                <span asp-validation-for="FbFatherName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FbEmail" class="control-label"></label>
+                <input asp-for="FbEmail" class="form-control" />
+                <span asp-validation-for="FbEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FbGender" class="control-label"></label><br />
+                <label>Male</label>
+                <input type="radio" asp-for="FbGender" value="male" class="form-check-input" />
+                <label>Female</label>
+                <input type="radio" asp-for="FbGender" value="female" class="form-check-input" />
+
+                <span asp-validation-for="FbGender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FbMobile" class="control-label"></label>
+                <input asp-for="FbMobile" class="form-control" />
+                <span asp-validation-for="FbMobile" class="text-danger"></span>
+            </div>
+           
+            <div class="form-group">
+                <label asp-for="FbFeedback" class="control-label"></label>
+                <input  asp-for="FbFeedback" class="form-control" />
+                <span asp-validation-for="FbFeedback" class="text-danger"></span>
+            </div>
+            <div class="form-group mt-2">
+                <div class="d-grid">
+                <input type="submit" value="Submit" class="btn btn-primary" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

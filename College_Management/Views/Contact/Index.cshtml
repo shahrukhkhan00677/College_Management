@@ -1,0 +1,43 @@
+﻿@model IEnumerable<College_Management.Models.TblContact>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h3 class="text-center">Contact Person Information</h3>
+<hr style="height:10px" />
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <label>Name</label>
+            </th>
+            <th>
+                <label>Father Name</label>
+            </th>
+            <th>
+                <label>Email</label>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CnName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CnFatherName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CnEmail)
+            </td>
+            <td>
+                <a class="btn btn-info" asp-action="Details" asp-route-id="@item.CnId">Details</a> |
+                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.CnId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
